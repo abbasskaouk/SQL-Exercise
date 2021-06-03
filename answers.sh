@@ -110,11 +110,32 @@ PART-3: JOINS:
 	
 	----------------------------------------------------------------------------
 	
+PART-4: COUNT & FILTER:
+
+	Problem 1:
 	
+		SELECT Name, MAX(Points) as Highest_Points
+		FROM students
 	
+	Problem 2:
 	
+		SELECT AVG(Points) as Average_Points
+		FROM students
 	
+	Problem 3:
 	
+		SELECT COUNT(name) as count
+		FROM students
+		WHERE Points = 500
 	
+	Problem 4:
 	
+		SELECT name
+		FROM students
+		WHERE Name LIKE '%s%'
 	
+	Problem 5:
+	
+		SELECT *
+		FROM students
+		ORDER BY Points DESC

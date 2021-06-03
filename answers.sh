@@ -87,6 +87,29 @@ PART-2:
 	
 	----------------------------------------------------------------------------
 	
+PART-3: JOINS:
+
+	Problem 1:
+	
+		SELECT e.name, e.Company, c.Date
+		FROM employees e
+		INNER JOIN companies c ON e.Company = c.name
+	
+	Problem 2:
+	
+		SELECT e.name, e.Company, c.Date as DateMade
+		FROM employees e
+		INNER JOIN companies c ON e.Company = c.name
+		WHERE Date < 2000
+	
+	Problem 3:
+	
+		SELECT e.Company, e.Role as Has , e.name as empName
+		FROM employees e
+		WHERE e.Role = 'Graphic Designer'
+	
+	----------------------------------------------------------------------------
+	
 	
 	
 	

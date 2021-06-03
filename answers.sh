@@ -54,7 +54,38 @@ PART-1: Basic Queries:
 	
 	----------------------------------------------------------------------------
 	
+PART-2: 
 
+	***Creating Table:
+
+		CREATE TABLE graduates (
+			ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+			Name TEXT NOT NULL UNIQUE,
+			Age INTEGER,
+			Gender TEXT,
+			Points INTEGER,
+			Graduation TEXT
+		)
+	
+	***Copy Layal data from students to graduates:
+	
+		INSERT INTO graduates (ID, name, Age, Gender, Points)
+		SELECT Id, name, Age, Gender, Points
+		FROM students
+		WHERE name="Layal"
+	
+	***Add the graduation date previously mentioned to Layals record in graduates
+	
+		UPDATE graduates
+		SET Graduation = '08/09/2018'
+		WHERE ID = 4
+	
+	***Remove Layals record from students
+
+		DELETE FROM students
+		WHERE name="Layal"
+	
+	----------------------------------------------------------------------------
 	
 	
 	
